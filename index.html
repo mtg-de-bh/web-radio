@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTG DE BH - Web Rádio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #000020, #000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff80;
+    }
+
+    .player {
+      background: #111;
+      border: 2px solid #00bfff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 25px #00bfff40;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎧 MTG DE BH - Web Rádio</header>
+
+  <div class="player">
+    <script src="//myradiostream.com/embed/azulrin"></script>
+  </div>
+
+  <footer>
+    <p><a href="http://myradiostream.com/azulrin" target="_blank">Ouvir direto no MyRadioStream</a></p>
+  </footer>
+
+</body>
+</html>
