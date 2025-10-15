@@ -5,54 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MTG DE BH - Web Rádio</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: radial-gradient(circle at top, #000020, #000);
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: radial-gradient(circle at top, #000010, #000);
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
     }
 
     header {
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 2.3rem;
+      font-weight: 700;
       margin-bottom: 20px;
       color: #00bfff;
-      text-shadow: 0 0 10px #00bfff80;
+      text-shadow: 0 0 25px #00bfff;
+      letter-spacing: 1px;
     }
 
     .player {
-      background: #111;
-      border: 2px solid #00bfff;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 0 25px #00bfff40;
+      background: rgba(20, 20, 40, 0.9);
+      border: 1px solid #00bfff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 30px #00bfff40;
+      max-width: 450px;
       width: 90%;
-      max-width: 400px;
+      z-index: 2;
     }
 
     footer {
       margin-top: 25px;
-      font-size: 0.85rem;
-      color: #aaa;
+      font-size: 0.9rem;
+      color: #ccc;
+      z-index: 2;
     }
 
     a {
       color: #00bfff;
       text-decoration: none;
+      font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    /* Fundo animado estilo energia */
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, #001030, #000010);
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 191, 255, 0.2);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    .social {
+      margin-top: 20px;
+      z-index: 2;
+    }
+
+    .social a {
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: #1e90ff;
+    }
   </style>
 </head>
 <body>
+
+  <div class="bg">
+    <div class="circle" style="width:150px; height:150px; top:10%; left:20%; animation-delay:0s;"></div>
+    <div class="circle" style="width:200px; height:200px; top:50%; left:70%; animation-delay:3s;"></div>
+    <div class="circle" style="width:120px; height:120px; top:80%; left:40%; animation-delay:6s;"></div>
+  </div>
 
   <header>🎧 MTG DE BH - Web Rádio</header>
 
@@ -60,8 +121,15 @@
     <script src="//myradiostream.com/embed/azulrin"></script>
   </div>
 
+  <div class="social">
+    <!-- Adicione links das suas redes aqui -->
+    <a href="https://instagram.com/" target="_blank">Instagram</a> |
+    <a href="https://youtube.com/" target="_blank">YouTube</a> |
+    <a href="http://myradiostream.com/azulrin" target="_blank">Player externo</a>
+  </div>
+
   <footer>
-    <p><a href="http://myradiostream.com/azulrin" target="_blank">Ouvir direto no MyRadioStream</a></p>
+    © 2025 MTG DE BH - Web Rádio. Todos os direitos reservados.
   </footer>
 
 </body>
